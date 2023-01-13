@@ -1,0 +1,48 @@
+{
+<erl>
+out(A) ->
+	{html, integer_to_list(erlang:system_time(second)+600)}.
+</erl>,
+	"hairdressers":	[
+		{
+			"id":	"h001",
+			"name":	"Maria	Papadimitriou",
+			"imageID":	"h001_icon_tmb",
+			"services":	[
+				{
+					"type":	"male_haircut",
+					"price":	1000
+				},
+				{
+					"type":	"female_haircut",
+					"price":	1500
+				},
+				{
+					"type":	"children_haircut",
+					"price":	800
+				},
+				{
+					"type":	"hair_coloring",
+					"price":	1800
+				}
+			],
+			"offers": [
+				{
+					"id": "special_needs",
+					"requirements": [
+						{
+							"type": "has_any_user_flag",
+							"flags": [
+								"special_needs",
+								"elderly"
+							]
+						}
+					],
+					"targeted_services": "every",
+					"discount_type": "percentage",
+					"discount_value": 10
+				}
+			]
+		}
+	]
+}
